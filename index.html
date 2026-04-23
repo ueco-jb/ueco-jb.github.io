@@ -33,7 +33,6 @@
     }
     a:hover { opacity: 0.7; }
 
-    /* --- Navigation --- */
     nav {
       position: fixed;
       top: 0;
@@ -66,7 +65,6 @@
     }
     nav .nav-links a:hover { color: var(--text); opacity: 1; }
 
-    /* --- Layout --- */
     main {
       max-width: 720px;
       margin: 0 auto;
@@ -87,7 +85,6 @@
       margin-bottom: 2rem;
     }
 
-    /* --- Hero --- */
     .hero {
       padding-top: 8rem;
       padding-bottom: 4rem;
@@ -114,7 +111,6 @@
     .hero .contact-row a { color: var(--text-muted); }
     .hero .contact-row a:hover { color: var(--text); }
 
-    /* --- Featured Projects --- */
     .featured-project {
       margin-bottom: 2.5rem;
     }
@@ -140,7 +136,6 @@
       margin-bottom: 0.75rem;
     }
 
-    /* --- About --- */
     #about {
       padding: 1.5rem 0;
     }
@@ -150,7 +145,6 @@
       line-height: 1.7;
     }
 
-    /* --- Skills --- */
     .skills-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -175,7 +169,6 @@
       color: var(--text-muted);
     }
 
-    /* --- Experience --- */
     .job {
       margin-bottom: 2.5rem;
     }
@@ -234,7 +227,6 @@
       border: 1px solid var(--border);
     }
 
-    /* --- Project links in experience --- */
     .job a.project-link {
       color: var(--text);
       border-bottom: 1px solid var(--border);
@@ -245,7 +237,6 @@
       opacity: 1;
     }
 
-    /* --- Job tech tags --- */
     .job-tech {
       display: flex;
       flex-wrap: wrap;
@@ -263,7 +254,6 @@
       letter-spacing: 0.06em;
     }
 
-    /* --- Education --- */
     .edu h3 {
       font-size: 1rem;
       font-weight: 600;
@@ -274,7 +264,6 @@
       color: var(--text-muted);
     }
 
-    /* --- Interests --- */
     .interests-list {
       display: flex;
       flex-wrap: wrap;
@@ -288,7 +277,6 @@
       color: var(--text-muted);
     }
 
-    /* --- Contact --- */
     .contact-links {
       display: flex;
       flex-direction: column;
@@ -308,7 +296,13 @@
       color: #555;
     }
 
-    /* --- Footer --- */
+    .protected em {
+      font-style: normal;
+      opacity: 0.5;
+      cursor: pointer;
+    }
+    .protected:hover em { opacity: 0.8; }
+
     footer {
       max-width: 720px;
       margin: 0 auto;
@@ -318,7 +312,6 @@
       color: #444;
     }
 
-    /* --- Responsive --- */
     @media (max-width: 600px) {
       .hero h1 { font-size: 1.8rem; }
       .hero .tagline { font-size: 1rem; }
@@ -332,7 +325,7 @@
 
 <nav>
   <div class="nav-inner">
-    <span class="nav-name">JB</span>
+    <span class="nav-name">ueco-jb</span>
     <div class="nav-links">
       <a href="#projects">Projects</a>
       <a href="#skills">Skills</a>
@@ -349,14 +342,14 @@
     <h1>Jakub</h1>
     <p class="tagline">Software Engineer & Co-founder at MoonBite GmbH</p>
     <div class="contact-row">
-      <a href="mailto:jakub@moonbite.space">jakub@moonbite.space</a>
+      <a href="#" class="protected" data-v="amFrdWJAbW9vbmJpdGUuc3BhY2U=" data-p="mailto:" onclick="reveal(this);return false"><em>click to reveal email</em></a>
       <a href="https://github.com/ueco-jb">github.com/ueco-jb</a>
-      <span>tg: @jakubdev</span>
+      <a href="#" class="protected" data-v="QGpha3ViZGV2" data-p="https://t.me/" data-strip="@" onclick="reveal(this);return false"><em>click to reveal tg</em></a>
     </div>
   </section>
 
   <section id="about">
-    <p class="about-text">Hey, I'm Jakub. I'm a blockchain and smart contract engineer - have been for the past five years, working mostly in Rust and Go since 2020. I'm an advocate of DeFi, open source software, and a tech enthusiast overall.</p>
+    <p class="about-text">Hey, I'm Jakub. I'm a blockchain and smart contract engineer - have been for the past five years, working mostly in Rust and Go since 2020. I'm an advocate of DeFi and FOSS. And a tech enthusiast overall.</p>
   </section>
 
   <section id="projects">
@@ -480,7 +473,7 @@
         <li>Developed <a class="project-link" href="https://github.com/MoonBite-GmbH/soroban-multisig-contracts">soroban-multisig-contracts</a> - multisig contract on Soroban with upgrade proposal mechanism</li>
         <li>Main developer of <a class="project-link" href="https://github.com/WHELP-project/whelp-contracts">WHELP DEX</a> on Coreum - created initial architecture, DEX utils library, factory/asset types, fee splitter, and staking</li>
         <li>Contributed to <a class="project-link" href="https://github.com/securesecrets/shade">Shade Protocol</a> on Secret Network - built lending protocol components including market contracts, credit agency, and SNIP20 token refactoring</li>
-        <li>Performed security audits including Pulsara (DEX on Coreum), Palomachain (PalomaDEX), and Stride (ICA oracle and staking scaling factor CosmWasm contracts), among others</li>
+        <li>Performed security audits for various projects, including Pulsara (DEX on Coreum), Stride (ICA oracle and staking scaling factor CosmWasm contracts) and Palomachain (PalomaDEX) among others</li>
       </ul>
       <div class="job-tech">
         <span class="job-tech-tag">Rust</span>
@@ -616,9 +609,10 @@
   <section id="contact">
     <h2 class="section-title">Contact</h2>
     <div class="contact-links">
-      <a href="mailto:jakub@moonbite.space"><span>Email</span> jakub@moonbite.space</a>
+      <a href="#" class="protected" data-v="amFrdWJAbW9vbmJpdGUuc3BhY2U=" data-p="mailto:" onclick="reveal(this);return false"><span>Email</span> <em>click to reveal</em></a>
       <a href="https://github.com/ueco-jb"><span>GitHub</span> ueco-jb</a>
-      <a href="https://t.me/jakubdev"><span>Telegram</span> @jakubdev</a>
+      <a href="#" class="protected" data-v="QGpha3ViZGV2" data-p="https://t.me/" data-strip="@" onclick="reveal(this);return false"><span>Telegram</span> <em>click to reveal</em></a>
+      <a href="https://app.simplymeet.me/jakub-moonbite/30min"><span>Meet</span> Book a 30 min call</a>
     </div>
   </section>
 
@@ -626,5 +620,17 @@
 
 <footer>2026</footer>
 
+<script>
+function reveal(el) {
+  var v = atob(el.dataset.v);
+  var strip = el.dataset.strip;
+  var href = strip ? v.replace(strip, '') : v;
+  el.href = el.dataset.p + href;
+  el.onclick = null;
+  var label = el.querySelector('span');
+  el.textContent = v;
+  if (label) el.prepend(label);
+}
+</script>
 </body>
 </html>

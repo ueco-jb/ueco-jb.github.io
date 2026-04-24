@@ -111,6 +111,32 @@
     .hero .contact-row a { color: var(--text-muted); }
     .hero .contact-row a:hover { color: var(--text); }
 
+    .schedule {
+      margin-top: 1.5rem;
+      font-size: 0.85rem;
+    }
+    .schedule summary {
+      cursor: pointer;
+      display: inline-block;
+      padding: 0.4rem 0.8rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      color: var(--text-muted);
+      list-style: none;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .schedule summary::-webkit-details-marker { display: none; }
+    .schedule summary:hover { color: var(--text); border-color: var(--text-muted); }
+    .schedule[open] summary { color: var(--text); }
+    .schedule a {
+      display: inline-block;
+      margin-top: 0.6rem;
+      color: var(--text);
+      border-bottom: 1px solid var(--border);
+    }
+    .schedule a:hover { border-color: var(--text-muted); opacity: 1; }
+
     .featured-project {
       margin-bottom: 2.5rem;
     }
@@ -346,10 +372,14 @@
       <a href="https://github.com/ueco-jb">github.com/ueco-jb</a>
       <a href="#" class="protected" data-v="QGpha3ViZGV2" data-p="https://t.me/" data-strip="@" onclick="reveal(this);return false"><em>click to reveal tg</em></a>
     </div>
+    <details class="schedule">
+      <summary>Click to schedule a meeting</summary>
+      <a href="https://app.simplymeet.me/jakub-moonbite/30min">Book a 30 min call on SimplyMeet</a>
+    </details>
   </section>
 
   <section id="about">
-    <p class="about-text">I'm Jakub, a blockchain and smart contract engineer working mainly in Rust and Go since 2020. For the past few years my specialization has been decentralized finance, and I've designed and written several protocols with successful launches. I advocate for DeFi and FOSS, and I'm passionate about tech in all its forms.</p>
+    <p class="about-text">I'm Jakub, a blockchain and smart contract engineer with 10+ years of experience. Since 2020 I work mainly in Rust and Go. For the past few years my specialization has been decentralized finance, and I've designed and written several protocols with successful launches. I advocate for DeFi and FOSS, and I'm passionate about tech in all its forms. These days I focus on autonomous trading and vaults.</p>
   </section>
 
   <section id="projects">
@@ -367,7 +397,7 @@
 
     <div class="featured-project">
       <h3><a href="https://github.com/wynddao/wynddex">WYND</a></h3>
-      <p>Led a team of four engineers under the mentorship of the founder of the CosmWasm smart contract framework. Successfully built and launched a multi-protocol DeFi suite on Juno using CosmWasm, including a <a href="https://github.com/wynddao/wynddex">DEX</a>, <a href="https://github.com/wynddao/wynd-lsd">liquid staking derivatives</a>, <a href="https://github.com/wynddao/wynd-lend">lending</a>, and other interesting features such as a gauge orchestrator, allowing users to vote of protocol's liquid staking commitment using their staking tokens as voting power.</p>
+      <p>A year earlier, in 2022, I led a team of four engineers under the mentorship of the founder of the CosmWasm smart contract framework. Together we successfully built and launched a multi-protocol DeFi suite on Juno using CosmWasm, including a <a href="https://github.com/wynddao/wynddex">DEX</a>, <a href="https://github.com/wynddao/wynd-lsd">liquid staking derivatives</a>, <a href="https://github.com/wynddao/wynd-lend">lending</a>, and other interesting features such as a gauge orchestrator, which let users vote on the protocol's liquid staking commitment using their staking tokens as voting power.</p>
       <div class="job-tech">
         <span class="job-tech-tag">Rust</span>
         <span class="job-tech-tag">CosmWasm</span>
@@ -377,10 +407,10 @@
 
     <div class="featured-project">
       <h3><a href="https://github.com/Lay3rLabs/WAVS">WAVS</a></h3>
-      <p>Major contributor to a high-performance async Rust platform bridging Web2 and Web3 capabilities through decentralized event-driven Autonomous Verified Services. Built the aggregator engine, integrated early-stage WASI libraries like wasi-keyvalue, implemented per-block triggers that became core functionality of WAVS, and added observability with Prometheus and Jaeger.</p>
+      <p>More recently, since 2025, I've been a major contributor to a high-performance async Rust platform bridging Web2 and Web3 capabilities through decentralized event-driven Autonomous Verified Services. I built the aggregator engine, integrated early-stage WASI libraries like wasi-keyvalue, implemented per-block triggers that became core functionality of WAVS, and added observability with Prometheus and Jaeger.</p>
       <div class="job-tech">
         <span class="job-tech-tag">Rust</span>
-        <span class="job-tech-tag">async</span>
+        <span class="job-tech-tag">tokio</span>
         <span class="job-tech-tag">EigenLayer</span>
         <span class="job-tech-tag">WASM</span>
       </div>
